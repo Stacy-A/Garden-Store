@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manage Products</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+
+ 
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+
+<body>
+
+    <section class="site-header">
+    
+    </section>
+
+    <section class="hero">
+        <div class="banner inner-section">
+            <h1 class="heading">Products Management Page</h1>
+        </div>  
+    
+    </section>
+
+
+    <section id="admin-login">
+        <h2>Admin Login</h2>
+        <p class="admin-message">Fill in your admin login and password (admin, admin).</p>
+        <div id="login-form">
+            <input type="text" id="admin-username" placeholder="Username">
+            <input type="password" id="admin-password" placeholder="Password">
+            <button id="login-btn">Login</button>
+        </div>
+        <p id="login-error" style="color:red; display:none;">Wrong username or password!</p>
+  </section id="admin-login">
+
+
+    <section id="manage-page">
+    <section class="form-section" id="manage-form">
+        <div class="inner-section column">
+            <h2>Create a New Product</h2>
+            <form id="product-form">
+
+                <div class="form-field">
+                    <label for="product-title">Product Title</label>
+                    <input 
+                    type="text" 
+                    id="product-title" 
+                    name="product-title" 
+                    required
+                    >
+                </div>
+
+              
+
+                <div class="form-field">
+                    <label for="product-price">Product Price</label>
+                    <input 
+                    type="number" 
+                    id="product-price" 
+                    name="product-price" 
+                    step="0.01"
+                    min="0"
+                    required
+                    >
+                </div>
+
+                <div class="form-field">
+                    <label for="product-image">Product Image</label>
+                    <input 
+                    type="file" 
+                    id="product-image" 
+                    name="product-image"
+                    accept="image/*"
+                    
+                    >
+                </div>
+
+                <div class="form-field">
+                    <label for="category-select">Choose Category</label>
+                    <select id="category-select" required>
+                        <option value="plants">Plants</option>
+                        <option value="seeds">Seeds</option>
+                        <option value="tools">Tools</option>
+                    </select>
+                </div>
+
+                
+
+                <div class="form-field">
+                    <label for="product-description">Product Description</label>
+                    <textarea 
+                    type="text" 
+                    id="product-description" 
+                    name="product-description" 
+                    required
+                    ></textarea>
+                </div>
+
+
+                <div class="form-field">
+                    <label for="short-description">Short Description</label>
+                    <textarea 
+                    type="text" 
+                    id="short-description" 
+                    name="short-description" 
+                    required
+                    ></textarea>
+                </div>
+
+                <div class="form-field">
+                    <label for="product-stock">Quantity in Stock</label>
+                    <input 
+                    type="number" 
+                    id="product-stock" 
+                    name="product-stock"
+                    min="0"
+                    required
+                    >
+                </div>
+
+                <button type="submit">Save Product</button>
+
+            </form>
+         
+            </div>
+
+    </section>
+
+     <section class="manage-catalogue" id="products-grid">
+        <div class="inner-section column">
+            <h2>Existing Products</h2>
+            <div class="grid">
+            </div>  
+        </div>
+    </section>
+    </section>
+
+    <footer> 
+        
+
+    </footer> 
+    <script src="global.js" defer></script>
+    <script src="manageShop.js" defer></script>
+    
+
+
+    </body>
