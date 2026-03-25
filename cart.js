@@ -167,7 +167,7 @@ document.querySelector('#popup-close').addEventListener('click', function() {
 
   let currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
-  if (!sessionStorage.getItem('isAdmin')) {
+  if (!localStorage.getItem('isAdmin')) {
     productsInCart = [];
     localStorage.setItem('productsInCart', JSON.stringify(productsInCart));
     renderCart();
