@@ -214,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
   loginError.style.display = "none";
 
  
-  if (sessionStorage.getItem("isAdmin")) {
+  if (localStorage.getItem("isAdmin")) {
     loginForm.style.display = "none";
     manageContent.style.display = "block";
   }
@@ -224,7 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const password = document.getElementById("admin-password").value;
 
     if (username === adminUsername && password === adminPassword) {
-      sessionStorage.setItem("isAdmin", true); // save login session
+      localStorage.setItem("isAdmin", true); // save login session
       loginForm.style.display = "none";
       manageContent.style.display = "block";
       loginError.style.display = "none";
